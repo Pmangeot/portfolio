@@ -1,27 +1,21 @@
-import logo from '../../assets/logo.svg';
-
-import './App.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Accueil from '../../pages/Accueil';
+import Competences from '../../pages/Competences';
+import Contact from '../../pages/Contact';
+import Portfolio from '../../pages/Portfolio';
+import notfound from '../../pages/notfound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <p>
-          Edit <code>src/components/App/App.tsx</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://react.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/competences" Component={Competences} />
+        <Route path="/contact" Component={Contact} />
+        <Route path="/portfolio" Component={Portfolio} />
+        <Route path="/" Component={Accueil} />
+        <Route Component={notfound} />
+      </Routes>
+    </Router>
   );
 }
 

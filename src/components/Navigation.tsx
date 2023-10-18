@@ -5,7 +5,7 @@ function Navigation() {
     <div className="sideBar">
       <div className="infos">
         <div className="infosContent">
-          <img src="PM-photo.jpeg" alt="Pierre Mangeot" />
+          <img src="Portrait.JPG" alt="Pierre Mangeot" />
           <h3>Mangeot Pierre</h3>
         </div>
       </div>
